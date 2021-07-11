@@ -4,16 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Countdown Timer</title>
+    <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1 class="welcome">Are you ready?</h1>
-      <button id="start">Start</button>
-      <h2 id="countdown"></h2>
-      <p id="main"></p>
-    </div>
+    <main class="page-content" id="page-content">
+
+      <header>
+        <button class="highscore">View Scores</button>
+        <h3 id="countdown">Time: </h3>
+      </header>
+
+      <div class="container" id="starter" style="display: block;">
+        <h1 class="welcome">Are you ready?</h1>
+        <button id="start">Start</button>
+      </div>
+
+      <div class="quiz" id="quiz" style="display: none;">
+        <h1 class="question" id="question"></h1>
+        <button class="answers" id="0"></button>
+        <button class="answers" id="1"></button>
+        <button class="answers" id="2"></button>
+        <button class="answers" id="3"></button>
+      </div>
+
+      <div class="checker" id="checker" style="display: none;">
+        <h1 class="checked" id="checked"></h1>
+      </div>
+
+      <div class="end" id="end" style="display: none;">
+        <form id="end-form">
+          <div class="form-group">
+            <h1 id="score"></h1>
+            <input type="text" name="end-input" placeholder="Enter your initials." />
+            <button class="btn" id="save-score" type="submit">Submit Score</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="scores" id="scores" style="display: none;">
+        <button class="home" id="home">Return to home screen.</button>
+        <h1>Scores</h1>
+      </div>
+
+    </main>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
